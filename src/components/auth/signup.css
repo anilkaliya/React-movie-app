@@ -1,0 +1,29 @@
+.container{
+    top:5rem;
+    background-color: seashell;
+    top: 5rem; 
+   }
+ 
+  
+  .loader{
+    left:40%;
+    top:30%;
+    z-index: 100;
+    position: absolute;
+  }
+  .card-body{
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .btn-secondary{
+    margin-left: 17%;
+    width: 57%;
+  }
+   body{
+     background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fbackground%2F&psig=AOvVaw3aqU_fcr3ZEs3Xmo74yxNo&ust=1587384076310000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPCDkdG49OgCFQAAAAAdAAAAABAD');
+   }
+   h5{
+     text-align: center;
+     margin-bottom: 15px;
+   }

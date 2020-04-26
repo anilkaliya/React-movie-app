@@ -1,0 +1,50 @@
+.one-post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  background-color: grey;
+  align-items: center;
+  width: 50%;
+  margin: 10px;
+}
+
+
+.posts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+  
+.card{
+  margin-top: 5px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+  .post-image {
+    width:100%;
+    text-align: center
+  }
+  .title{
+    text-align: center;
+  }
+  .overview{
+    text-align: center;
+  }
+   .edit {
+    text-align: center;
+  }
+  
+  .post-image img {
+    width: 50%;
+    height: 50%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    
+  }
+
+  a{
+    margin-left: 15%;
+    margin-top: 5px;
+  }

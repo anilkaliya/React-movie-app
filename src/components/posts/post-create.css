@@ -1,0 +1,22 @@
+.card-body{
+  margin: 5% 15% 10% 15%;
+  padding-right: 0cm;
+}
+ 
+  
+  .loader{
+    left:40%;
+    top:30%;
+    z-index: 100;
+    position: absolute;
+  }
+
+  .btn-secondary{
+    margin-left: 17%;
+    width: 57%;
+    border-radius: 10px;
+  }
+
+  .form-control-file{
+    margin-left: 28%;
+  }
