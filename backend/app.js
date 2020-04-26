@@ -10,13 +10,13 @@ const postsRoutes = require("./routes/posts");
 
 
 const app = express();
- var distDir = __dirname + "../build";
+ var distDir = __dirname + "/../build";
 
  app.use(bodyParser.json());
  app.use(bodyParser.urlencoded({ extended: false}));
  app.use(express.static(distDir));
  app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, '/../build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
 
 // mongoose
