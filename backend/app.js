@@ -9,7 +9,7 @@ const postsRoutes = require("./routes/posts");
 
 
 const app = express();
- var distDir = __dirname + "/build";
+ var distDir = __dirname + "/../build";
 
  app.use(bodyParser.json());
  app.use(bodyParser.urlencoded({ extended: false}));
