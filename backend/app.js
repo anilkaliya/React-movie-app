@@ -25,7 +25,7 @@ const app = express();
 //   });
 
 mongoose
-  .connect(process.env.MONGOLAB_CHARCOAL_URI)
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("Connected to database!");
   }).catch(()=>{
