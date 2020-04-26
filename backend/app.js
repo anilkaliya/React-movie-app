@@ -15,22 +15,22 @@ const app = express();
  app.use(bodyParser.urlencoded({ extended: false}));
  app.use(express.static(distDir));
 
-mongoose
-  .connect("mongodb://localhost:27017/local")
-  .then(() => {
-    console.log("Connected to database!");
-  })
-  .catch(() => {
-    console.log("Connection failed!");
-  });
-
 // mongoose
-//   .connect(process.env.MONGOLAB_CHARCOAL_URI)
+//   .connect("mongodb://localhost:27017/local")
 //   .then(() => {
 //     console.log("Connected to database!");
-//   }).catch(()=>{
+//   })
+//   .catch(() => {
 //     console.log("Connection failed!");
 //   });
+
+mongoose
+  .connect(process.env.MONGOLAB_CHARCOAL_URI)
+  .then(() => {
+    console.log("Connected to database!");
+  }).catch(()=>{
+    console.log("Connection failed!");
+  });
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader(
