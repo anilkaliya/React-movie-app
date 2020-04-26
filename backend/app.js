@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const movieRoutes = require("./routes/movie");
 const postsRoutes = require("./routes/posts");
  const userRoutes = require("./routes/users");
+ const path=require('path');
 //  const { secret } = require('./config');
 
 
