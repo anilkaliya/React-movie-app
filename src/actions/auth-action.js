@@ -54,7 +54,7 @@ export function onSignup(email, password) {
     return dispatch => {
         dispatch(beforeRequest());
 
-        axios.post(`http://localhost:3001/api/users/signup`,data).
+        axios.post(`/api/users/signup`,data).
             then(res => {
                 console.log(res);
                 dispatch(afterSignupRequest())
@@ -72,7 +72,7 @@ export function onLogin(email, password) {
     console.log(email);
     return dispatch => {
         dispatch(beforeRequest());
-        axios.post(`http://localhost:3001/api/users/signin`,data).
+        axios.post(`/api/users/signin`,data).
             then(res => {
                 setToken(res.data.token);
                 setExpiry(res.data.expiresAt);

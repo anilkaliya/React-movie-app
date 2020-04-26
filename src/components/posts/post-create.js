@@ -24,7 +24,7 @@ import {withRouter} from 'react-router-dom'
     const {id}=this.props.location.state;
     this.id=id;
     if(id){
-        axios.get('http://localhost:3001/api/posts/'+id).
+        axios.get('/api/posts/'+id).
         then(res=>{
             console.log(res)
             this.setState({
@@ -49,7 +49,7 @@ import {withRouter} from 'react-router-dom'
         if(this.id){
 
             formData.set('id',this.id)
-            axios.put('http://localhost:3001/api/posts/' + this.id, formData)
+            axios.put('/api/posts/' + this.id, formData)
             .then(res => {
                 this.setState({
                     isLoading: false
@@ -60,7 +60,7 @@ import {withRouter} from 'react-router-dom'
             })
         }
         else{
-        axios.post('http://localhost:3001/api/posts', formData, 
+        axios.post('/api/posts', formData, 
         { headers: { 'Content-Type': this.state.type } })
             .then(res => {
                 this.setState({

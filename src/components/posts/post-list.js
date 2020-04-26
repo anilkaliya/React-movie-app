@@ -14,7 +14,7 @@ const initial=[];
     const [movieArray, setMovieArray]=useState(initial)
     useEffect(()=>{
         console.log("updated");
-        axios.get(`http://localhost:3001/api/posts`).
+        axios.get(`/api/posts`).
                 then(res => {
                     if (res.data.posts) {
                         setMovieArray(res.data.posts)
@@ -28,7 +28,7 @@ const initial=[];
         this.onDelete(id)
     }
     const onDelete = (id) => {
-        axios.delete('http://localhost:3001/api/posts/' + id).
+        axios.delete('/api/posts/' + id).
             then(res => {
                    history.push('/')
             }).
