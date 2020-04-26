@@ -19,22 +19,22 @@ const app = express();
   res.sendFile(path.join(__dirname+ '/../build/index.html'));
 });
 
-mongoose
-  .connect("mongodb://localhost:27017/local")
-  .then(() => {
-    console.log("Connected to database!");
-  })
-  .catch(() => {
-    console.log("Connection failed!");
-  });
-
 // mongoose
-//   .connect(process.env.MONGODB_URI)
+//   .connect("mongodb://localhost:27017/local")
 //   .then(() => {
 //     console.log("Connected to database!");
-//   }).catch(()=>{
+//   })
+//   .catch(() => {
 //     console.log("Connection failed!");
 //   });
+
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log("Connected to database!");
+  }).catch(()=>{
+    console.log("Connection failed!");
+  });
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader(
